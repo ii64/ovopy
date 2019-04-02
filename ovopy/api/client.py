@@ -290,6 +290,23 @@ class OVOClient(object):
 	""" 
 	-*- UserActivity Record -*-
 	"""
+	@needLoggedin
+	def getAllNotification(self):
+		r = self.req('get',
+			'v1.0/notification/status/all')
+		if(self.debug):
+			return r.status_code, r.headers, r.text
+		else:
+			if(r.status_code != 200):
+				err = OVOHttpResponse()
+				try: err.read(r.json())
+				except: err.read({})
+				err.httpStatus = r.status_code
+				raise OVOUnexpectedError(err)
+			else:
+				res = NotificationAllRespone()
+				res.read(r.json())
+				return res
 
 	@needLoggedin
 	def getUnreadNotification(self):

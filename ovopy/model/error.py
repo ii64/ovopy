@@ -2,7 +2,7 @@
 #JSON-RPC #ref:
 from base import *
 
-class AmmountException(Exception):
+class AmountException(Exception):
 	pass
 
 class OVOException(Exception):

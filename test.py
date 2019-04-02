@@ -19,12 +19,13 @@ if l2fa == ovopy.model.auth.LoginWithToken():
 	print('Let\'s see if it still valid')
 
 	#print(ovo.getBudget())
-	#print(ovo.getFrontModel())
+	print(ovo.getFrontModel())
 	#print(ovo.generateTrxId('xx', 10000))
 	#print(ovo.transferOvoBalance('xx', 10000))
 	#print(ovo.getUnreadNotification())
-	print(ovo.getWalletTransaction(page=1, limit=1))
-
+	#print(ovo.getWalletTransaction(page=1, limit=1))
+	#print(ovo.getAllNotification())
+	#print(ovo.getUnreadNotification())
 	os._exit(1)
 
 smsVerificationCode = input('SMS Verification Code >> ')

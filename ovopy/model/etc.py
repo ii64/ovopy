@@ -377,6 +377,36 @@ class GenTrxIdResponse(Response):
 	def read(self, MapObject):
 		self.trxId = MapObject.get('trxId', None)
 
+class Notification(Response):
+	def __init__(self,
+		id=None,
+		channelType=None,
+		messageType=None,
+		subject=None,
+		message=None,
+		dateCreated=None,
+		status=None,
+		receiver=None,
+		):
+		super().__init__()
+		self.id = id
+		self.channelType = channelType
+		self.messageType = messageType
+		self.subject     = subject
+		self.message     = message
+		self.dateCreated = dateCreated
+		self.status      = status
+		self.receiver    = receiver
+	def read(self, MapObject):
+		self.id = MapObject.get('id', None)
+		self.channelType = MapObject.get('channelType', None)
+		self.messageType = MapObject.get('messageType', None)
+		self.subject     = MapObject.get('subject', None)
+		self.message     = MapObject.get('message', None)
+		self.dateCreated = MapObject.get('dateCreated', None)
+		self.status      = MapObject.get('status', None)
+		self.receiver    = MapObject.get('receiver', None)
+
 class NotificationAllRespone(Response):
 	def __init__(self,
 		notifications=None,
@@ -384,7 +414,12 @@ class NotificationAllRespone(Response):
 		super().__init__()
 		self.notifications = notifications
 	def read(self, MapObject):
-		pass
+		for item1 in MapObject.get('notifications', []):
+			if self.notifications == None:
+				self.notifications = []
+			ctx = Notification()
+			ctx.read(item1)
+			self.notifications.append(ctx)
 
 class NotificationUnreadResponse(Response):
 	def __init__(self,

@@ -102,6 +102,9 @@ class OVO(object):
 	def logout(self, *args, **kws):
 		return self.client.logout(*args, **kws)
 
+	def getAllNotification(self, *args, **kws):
+		return self.client.getAllNotification(*args, **kws)
+
 	def getUnreadNotification(self, *arg, **kws):
 		return self.client.getUnreadNotification(*arg, **kws)
 
