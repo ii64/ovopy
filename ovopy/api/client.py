@@ -121,7 +121,7 @@ class OVOClient(object):
 		assert isinstance(refId, str), 'refId must be a string'
 		assert isinstance(verificationCode, str), 'verificationCode must be a string'
 		assert isinstance(phone_number, (str)), 'phone_number must be a string'
-		r = self.req('post', 
+		r = self.req('post',
 			'v2.0/api/auth/customer/login2FA/verify',
 			json={
 				'appVersion': self.app_version,
@@ -287,7 +287,7 @@ class OVOClient(object):
 				res.read(r.json())
 				return res
 
-	""" 
+	"""
 	-*- UserActivity Record -*-
 	"""
 	@needLoggedin

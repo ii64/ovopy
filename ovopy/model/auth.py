@@ -15,7 +15,7 @@ class LoginWithToken(Response):
 		self.saved   = MapObject.get('saved', None)
 
 class Login2FAResponse(Response):
-	def __init__(self, 
+	def __init__(self,
 		refId=None,
 		):
 		super().__init__()

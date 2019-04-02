@@ -1,5 +1,5 @@
 # ovopy
-[![Version 1.0.0](https://img.shields.io/badge/stable-1.1.1-brightgreen.svg "Version 1.0.0")](https://github.com/anysz/ovopy)
+[![Version 1.0.0](https://img.shields.io/badge/stable-1.0.0-brightgreen.svg "Version 1.0.0")](https://github.com/anysz/ovopy)
 [![Supported python versions: 3.6](https://img.shields.io/badge/python-3.6-green.svg "Supported python versions: 3.6")](https://www.python.org/download/releases/3.6/)
 [![License](https://img.shields.io/github/license/anysz/ovopy.svg)](https://github.com/anysz/ovopy/blob/master/LICENSE)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/e8dfd96812194ac393d40ec5ef478a54)](https://www.codacy.com/app/anysz/ovopy?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=anysz/ovopy&amp;utm_campaign=Badge_Grade)
@@ -103,11 +103,8 @@ print(r) # resp: LogoutResponse(httpStatus=200)
 ### OVOUnexpectedError
 An error occured from REST Endpoint caused by http code response is not 200, Most of them caused by invalid client payload
 
-
-
-
 ## Other Programming Languages
-Checkout also other Un-official OVO[id] Clients!
+Checkout also other Un-official OVO\[id] Clients!
 
 | Repository                                                   	| Language 	|
 |--------------------------------------------------------------	|----------	|
