@@ -97,7 +97,7 @@ class OVOClient(object):
 	def login2FA(self, phone_number):
 		assert isinstance(phone_number, (str)), 'phone_number must be a string'
 		r = self.req('post', 
-			'v2.0/api/auth/customer/login2FA', 
+			'v2.0/api/auth/customer/login2FA',
 			json={
 				'deviceId': self.device_id,
 				'mobile'  : phone_number,
