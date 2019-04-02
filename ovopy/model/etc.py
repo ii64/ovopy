@@ -169,7 +169,7 @@ class Profile(Response):
 		self.refNo       = refNo
 		self.userLevel   = userLevel
 		self.ovoId       = ovoId
-		self.dateOfBirth = dateOfBirth 
+		self.dateOfBirth = dateOfBirth
 		self.address     = address
 
 		self.telephones   = telephones

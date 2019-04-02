@@ -14,16 +14,16 @@
 ## Function status
 | Function  | Status  |
 |---|---|
-| `login2FA`  | OK |
-| `verifyLogin2FA`  | OK |
-| `loginSecurityCode`  | OK  |
-| `getBudget`  | OK  |
-| `getFrontModel`  | OK  |
+| `login2FA` | OK |
+| `verifyLogin2FA` | OK |
+| `loginSecurityCode` | OK |
+| `getBudget`  | OK |
+| `getFrontModel` | OK |
 | `generateTrxId` | OK |
 | `transferOvoBalance` | Invalid Model |
-| `logout`  | OK  |
-| `getUnreadNotification`  | OK  |
-| `getWalletTransaction`  | OK  |
+| `logout` | OK |
+| `getUnreadNotification` | OK |
+| `getWalletTransaction` | OK |
 
 Tested on OVO v2.8.0 | 27/03/2019 | Python 3.6
 

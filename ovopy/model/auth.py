@@ -24,7 +24,7 @@ class Login2FAResponse(Response):
 		self.refId = MapObject.get('refId', None)
 
 class Login2FAVerifyResponse(Response):
-	def __init__(self, 
+	def __init__(self,
 		mobile=None,
 		email=None,
 		fullName=None,

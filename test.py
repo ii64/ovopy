@@ -7,7 +7,7 @@ except ImportError:
 	print('Please run `python3 setup.py install` within this folder.')
 	os._exit(1)
 
-ovo = ovopy.OVO(debug=False) 
+ovo = ovopy.OVO(debug=False)
 
 phone_number = input('Phone number >> ')
 l2fa = ovo.login(phone_number)
