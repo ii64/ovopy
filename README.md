@@ -29,11 +29,14 @@ Tested on OVO v2.8.0 | 27/03/2019 | Python 3.6
 
 ## Examples
 ### Login
-You can check at `test.py`.
+You can check at `test.py`.  
 
 WARNING: When you logged in at the first time, make sure you got the token, because OVO limits loggedin device 
 ```python
 import ovopy
+# By default, settings saved to local .json file, so when you attempted to login with phone number (again) it'll use token that saved on local .json file resolved by phone number. You can disable this feature by adding `save_auth=False` at OVO class argument.
+# ovo = ovopy.OVO(save_auth=False)
+
 ovo = ovopy.OVO()
 # with phone_number
 l2fa  = ovo.login('<phone_number>')
