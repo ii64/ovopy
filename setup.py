@@ -6,6 +6,7 @@ import ovopy
 
 install_requires = [
 	'requests',
+	'livejson',
 	#'ujson',
 ]
 
