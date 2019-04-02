@@ -28,6 +28,9 @@
 Tested on OVO v2.8.0 | 27/03/2019 | Python 3.6
 
 ## Examples
+
+![](fig1.jpg)
+
 ### Login
 You can check at `test.py`.  
 
