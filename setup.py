@@ -2,7 +2,7 @@
 
 #from distutils.core import setup
 from setuptools import find_packages, setup
-import ovopy
+#import ovopy
 
 install_requires = [
 	'requests',
@@ -14,7 +14,7 @@ packages = ['ovopy']
 
 setup(
 	name='ovopy',
-	version=ovopy.__version__,
+	version='1.0.0', #ovopy.__version__,
 	description='Un-official OVOid Client for Python3',
 	author='Anysz',
 	url='https://github.com/anysz/ovopy',
