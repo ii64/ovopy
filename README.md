@@ -1,4 +1,5 @@
 # ovopy
+[![BuildStatus](https://travis-ci.org/anysz/ovopy.svg?branch=master)](https://travis-ci.org/anysz/ovopy)
 [![Version 1.0.0](https://img.shields.io/badge/stable-1.0.0-brightgreen.svg "Version 1.0.0")](https://github.com/anysz/ovopy)
 [![Supported python versions: 3.6](https://img.shields.io/badge/python-3.6-green.svg "Supported python versions: 3.6")](https://www.python.org/download/releases/3.6/)
 [![License](https://img.shields.io/github/license/anysz/ovopy.svg)](https://github.com/anysz/ovopy/blob/master/LICENSE)
