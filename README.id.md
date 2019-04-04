@@ -8,14 +8,14 @@
 
 *Un-official OVOid Python3 Client*
 
-Language: [English](README.md) [Indonesia](README.id.md)
+Bahasa: [English](README.md) [Indonesia](README.id.md)
 
 ---
-## Install
+## Instal
 `python3 setup.py install`
 
-## Function status
-| Function                	| Status               	|
+## Status Fungsi
+| Fungsi                  	| Status               	|
 |-------------------------	|----------------------	|
 | `login2FA`              	| OK                   	|
 | `verifyLogin2FA`        	| OK                   	|
@@ -28,16 +28,16 @@ Language: [English](README.md) [Indonesia](README.id.md)
 | `getUnreadNotification` 	| OK                   	|
 | `getWalletTransaction`  	| OK                   	|
 
-Tested on OVO v2.8.0 | 27/03/2019 | Python 3.6
+Telah dites pada OVO v2.8.0 | 27/03/2019 | Python 3.6
 
-## Examples
+## Contoh Penggunaan
 
 ![](fig1.jpg)
 
 ### Login
-You can check at `test.py`.  
+Untuk contoh penggunaan bisa cek di file `test.py`.  
 
-WARNING: When you logged in at the first time, make sure you got the token, because OVO limits loggedin device 
+PERHATIAN: Setelah masuk pertama kali, pastikan token yang didapat tersimpan, karena OVO membatasi akun tiap deviceId
 ```python
 import ovopy
 # By default, settings saved to local .json file, so when you attempted to login with phone number (again) it'll use token that saved on local .json file resolved by phone number. You can disable this feature by adding `save_auth=False` at OVO class argument.
@@ -56,35 +56,35 @@ lwt  = ovo.login(token='<token here JWT>')
 print(ovo.getFrontModel())
 ```
 
-### Account Information
-Get account information
+### Informasi Akun
+Mendapatkan informasi tentang akun
 ```python
 r = ovo.getFrontModel()
 print(r) # resp: FrontResponse(...)
 ```
 
-### Budget Details
-Get details of budget
+### Detail Budget
+Mendapatkan informasi seputar budget
 ```python
 r = ovo.getBudget()
 print(r) # resp: BudgetResponse(budget=History(amount=0, categoryId=None, spending=0), totalSpending=0, cycleDate=1, summary=[...])
 ```
 
-### Transaction History
-Get list of transactions history
+### Histori Transaksi
+Mendapatkan daftar histori transaksi
 ```python
 r = ovo.getWalletTransaction(page=1, limit=1)
 print(r) # resp: WalletTransactionResponse(...)
 ```
 
-### Balance Transfer
-Currently, You can only transfer two times, for the 3rd one you'll need signature header. Please make pull request if you know how to reproduce the signature, Thank you.
+### Transfer Saldo
+Untuk sementara, hanya bisa melakukan transfer dua kali, untuk yang ketiga membutuhkan header signature. Bila anda menemukan implementasi signature bisa membuat request pull, Terima kasih.
 ```python
 rtrx = ovo.transferOvoBalance('<to_phone_number>', 10000, None)
 print(rtrx) # resp: CustomerTransferResponse(...)
 ```
 
-### Notifications
+### Notifikasi
 ```python
 # Get all notifications
 rx = ovo.getAllNotification()
@@ -96,20 +96,20 @@ print(r)  # resp: NotificationUnreadResponse(Total=0)
 ```
 
 ### Logout
-Logout from client
+Logout dari client
 ```python
 r = ovo.logout()
 print(r) # resp: LogoutResponse(httpStatus=200)
 ```
 
-## Errors
+## Error
 ### OVOUnexpectedError
-An error occured from REST Endpoint caused by http code response is not 200, Most of them caused by invalid client payload
+Sebuah error terjadi karena respon kode http bukan 200, Kebanyakkan terjadi karena invalid client payload
 
-## Other Programming Languages
-Checkout also other Un-official OVO\[id] Clients!
+## Bahasa Program Lainnya
+Cek juga Un-official OVO\[id] client yang lainnya!
 
-| Repository                                                   	| Language 	|
+| Repositori                                                   	| Bahasa   	|
 |--------------------------------------------------------------	|----------	|
 | [@lintangtimur/ovoid](https://github.com/lintangtimur/ovoid) 	| PHP      	|
 | [@anysz/ovopy](https://github.com/anysz/ovopy)               	| Python   	|
